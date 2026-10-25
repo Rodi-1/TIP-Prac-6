@@ -1,0 +1,14 @@
+name: pz6-gorm
+services:
+  postgres:
+    image: postgres:15-alpine
+    ports:
+      - "5436:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: pz6_gorm
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+volumes:
+  postgres_data:
